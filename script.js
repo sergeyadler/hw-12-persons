@@ -118,7 +118,10 @@ function showStats() {
     // delete updateTotal replace with show stats show in <div id="stats"> after H2
 
     stats.querySelectorAll('p').forEach(el => el.remove());
-    totalPersons.textContent = `Total Persons: ${persons.length}`;
+    //totalPersons.textContent = `Total Persons: ${persons.length}`;
+    const total= document.createElement('p');
+    total.innerHTML = `<strong>Total Persons: </strong>${persons.length}`;
+
     const paragraphMaxAge = document.createElement('p');
     let maxAge = persons.reduce((maxAge, person) => person.age > maxAge ? person.age : maxAge, 0);
     paragraphMaxAge.innerHTML = `<strong>Oldest person:</strong> ${maxAge}`;
@@ -130,7 +133,7 @@ function showStats() {
     let averageAge = persons.reduce((acc, person) => acc + person.age, 0) / persons.length;
     paragraphAverageAge.innerHTML = `<strong>Average Age :</strong> ${averageAge}`;
 
-
+    stats.appendChild(total)
     stats.appendChild(paragraphMaxAge);
     stats.appendChild(paragraphMinAge);
     stats.appendChild(paragraphAverageAge);
