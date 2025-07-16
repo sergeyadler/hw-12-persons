@@ -13,8 +13,8 @@
 <body class="bg-light">
 <div id="form" class="container mt-5 py-3 d-flex justify-content-center">
 
-    <div class="border rounded p-3 bg-white shadow mb-4 row g-2 w-100">
-        <h1 class="mb-4 text-center"><i class="bi bi-person-add me-2 text-primary"></i>Add Person</h1>
+    <div class="border rounded p-3 bg-white shadow mb-4 row g-2 w-100 ">
+        <h1 class="mb-4 text-center"><i class="bi bi-person-add me-2 text-primary"></i>People Collection</h1>
         <label class="col-md-3"><input class="form-control shadow-sm" type="text" id="id" placeholder="Person ID"></label>
         <label class="col-md-3"><input class="form-control shadow-sm" type="text" id="firstName" placeholder="First Name"></label>
         <label class="col-md-3"><input class="form-control shadow-sm" type="text" id="lastName" placeholder="Last Name"></label>
@@ -22,11 +22,18 @@
         <button class="col-md-2 btn btn-success" id="addPerson"><i class="bi bi-person-add"></i> Add Person</button>
     </div>
 </div>
-<div id="persons" class="container py-3  bg-white shadow border rounded w-60">
+<div id="persons" class="container py-3  bg-white shadow border rounded w-60 mb-4">
 <h1>Persons: </h1>
 <ol id="personsList"  class="list-group card"></ol>
-<h5 id="totalPersons">Total Persons : 0</h5>
+<h5 id="totalPersons">Total people : 0</h5>
 
+</div>
+<div id="stats" class="container py-3  bg-white shadow border rounded w-60 ">
+    <h4>Statistics: </h4>
+    <!---Stats here from show stats-->
 </div>
 </body>
 </html>
+
+
+
